@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELVI.J-XPPLG1</title>
+</head>
+<body>
+    <script>
+                var penumpang = [
+            {
+                namapenumpang : "selvi",
+                driver : [
+                    {nama : "putra",kendaraan : "motor beat",lama : "35",tarifpermenit : 1000}
+                ]
+            },
+            {
+                namapenumpang : "julia",
+                driver : [
+                    {nama : "kurnia",kendaraan :"mobil avanza",lama : "40",tarifpermenit : 3000}
+                ]
+            }
+        ];
+        document.write("<h1> LIST PENUMPANG </h1>");
+        penumpang.forEach(s => {
+            document.write(`nama penumpang : ${s.namapenumpang} <br />`);
+                                     
+            s.driver.forEach( driver => {
+                document.write(`lama perjalanan : ${driver.lama} menit <br />`);
+                document.write(`nama driver : ${driver.nama} <br />`);
+                document.write(`kendaraan : ${driver.kendaraan} <br />`);
+                document.write(`tarif permenit driver : ${driver.tarifpermenit} <br />`);
+                document.write(`Total bayar : ${driver.tarifpermenit*driver.lama}`);    
+            })
+            document.write("<br /> ============================== <br />");
+        });
+        
+        
+    </script>
+</body>
+</html>
